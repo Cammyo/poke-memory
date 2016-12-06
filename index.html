@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="pokeApp" lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
   <script src="poke-memory.js"></script>
 </head>
-<body>
+<body ng-controller="pokeController as pCtrl" style="background-color:dimgrey;color:white;">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 card" 
+           ng-repeat="eachThing in pCtrl.pokeMasterArray track by $index" 
+           ng-click="pCtrl.cardClick(eachThing)">
+        <div class="front" >
+        {{eachThing}}
+        </div>
+        <div class="back">
+        {{eachThing}}
+        </div>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>

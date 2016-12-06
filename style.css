@@ -1,0 +1,14 @@
+.card{
+  width:260px;
+  height:225px;
+  text-align:center;
+  border:5px solid lightgray;
+}
+
+.front{
+  margin-right:20px;
+}
+.back{
+  margin-right:20px;
+
+}
